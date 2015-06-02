@@ -1,0 +1,1168 @@
+/* basic front-end style for PA calc */
+
+
+$orange: #ED8F22;
+$dark-orange: darken($orange,5%);
+$darker-orange: darken($orange,10%);
+$light-orange: lighten($orange,5%);
+$sans-serif: 'helvetica neue', Arial, Helvetica, sans-serif;
+
+
+$column: 6.25%; // Column width
+$gutter: 2.083333%; // Gutter between each two columns
+
+$col1: $column;
+$col2: $column*2 + $gutter*1;
+$col3: $column*3 + $gutter*2;
+$col4: $column*4 + $gutter*3;
+$col5: $column*5 + $gutter*4;
+$col6: $column*6 + $gutter*5;
+$col7: $column*7 + $gutter*6;
+$col8: $column*8 + $gutter*7;
+$col9: $column*9 + $gutter*8;
+$col10: $column*10 + $gutter*9;
+$col11: $column*11 + $gutter*10;
+$col12: $column*12 + $gutter*11;
+
+
+/* ==========================================================================
+   Responsive 
+   ========================================================================== */
+
+   .content-med-item-wrap .entry-content-slim {
+   	width: 90% !important;
+   }
+
+
+
+/* ==========================================================================
+   Typography 
+   ========================================================================== */
+
+   #pa-calc {
+   	color: #333333;
+   	font-weight: 300;
+   	overflow: hidden;
+	line-height: 1.4;
+
+
+	::-webkit-input-placeholder {
+		color: #999;
+		//font-family: $sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 1;
+		text-transform: none;
+	}
+	:-moz-placeholder {
+		color: #999;
+		//font-family: $sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 1;
+		text-transform: none;
+	}
+	::-moz-placeholder {
+		color: #999;
+		//font-family: $sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 1;
+		text-transform: none;
+	}
+	:-ms-input-placeholder {
+		color: #999;
+		//font-family: $sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 1;
+		text-transform: none;
+	}
+
+
+   	h1, h2, h3, h4, h4, h6, p, li {
+   	}
+
+   	h1, h2, h3, h4, h4, h6 {
+   		color: #333;
+   		font-weight: 500;
+   	}
+
+   	h1 {
+   		font-size: 2em;
+   		margin: 0 0.67em 0;
+   	}
+
+   	h2 {
+   		font-size: 1.8em;
+   		margin: 0.83em 0;
+   	}
+
+   	h3 {
+   		font-size: 1.5em;
+   		margin: 1em 0 .5em;
+   	}
+
+   	h4 {
+   		font-size: 1.2em;
+   		margin: 1em 0 0;
+   	}
+
+   	h5 {
+   		margin: 1em 0;
+   	}
+
+   	h6 {
+   		margin: 1em 0;
+   	}
+
+   	p {
+   		margin: 1em 0;
+   		font-weight: 300;
+   	}
+
+   	li {
+   	}
+
+   }
+
+
+
+
+
+/* ==========================================================================
+   Calculator Container
+   ========================================================================== */
+
+
+#pa-calc button,
+#pa-calc input,
+#pa-calc select,
+#pa-calc textarea {
+	font-family: sans-serif;
+	font-weight: 300;
+	margin: 0;
+}
+
+
+#pa-calc {
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+   	//font-family: $sans-serif;
+   	margin: 2em 0;
+
+   	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+}
+
+
+
+
+/* ==========================================================================
+   STEP 1
+   ========================================================================== */
+
+#pa-calc.pa-calc-step1 {
+
+   	.step-one-inner {
+   		padding: 1em;
+   		margin: 2em 0 0;
+   		border: 1px solid #DDD;
+   		background: #FFFFFF;
+   	}
+
+   	h4:after {
+   		content: " *";
+   		color: $orange;
+   	}
+
+   	.section-title {
+   		margin-top: .5em;
+   		padding: 0 1em;
+
+   		h3 {
+   			margin: 0 0 .5em;
+   		}
+   	}
+
+}
+
+/* ============================================
+   Step 1 Calculator Fields
+   ============================================ */
+
+#pa-calc .calc-fields {
+   	margin: 0 0 4px 0;
+   	padding: 0;
+
+   	.pa-field-group {
+   		padding: .5em 1em 0;
+   	}
+
+   	h4 {
+   		margin: 0;
+   	}
+
+   	.calc-field-group {
+   		transition: all 100ms linear;
+   		margin: 0;
+   		padding: 0;
+   		width: 100%;
+
+   		li {
+   			display: inline-block;
+   			list-style: none;
+   			margin: 0 0 1em 0;
+   			padding: 0 1em 0 0;
+   			width: 130px;
+   			vertical-align: top;
+
+			@media (max-width: 480px) {
+			  	width: 50%;
+			  	padding: 0;
+
+			}
+
+   			label {
+   				transition: all 100ms linear;
+
+				cursor: pointer;
+				margin: 0;
+				padding: 0;
+
+				&.checked {
+				}
+			}
+
+			img.calc-thumb {
+				transition: all 100ms linear;
+				border: 2px solid #EEE;
+				border-radius: 0;
+				box-shadow: none;
+				cursor: pointer;
+				box-shadow: none;
+				display: block;
+				width: 60px;
+				opacity: .8;
+
+				&:hover {
+					opacity: 1;
+				}
+
+				&.checked {
+					border: 2px solid $orange;
+					opacity: 1;
+					box-shadow: 0 0 2px $orange;
+				}
+			}
+		}
+	}
+}
+
+
+/* ============================================
+   FIELD GROUPS
+   ============================================ */
+
+
+#pa-calc .extra-fields .pa-field-group {
+   	padding: .5em 1em 0;
+   	margin: 0 0 4px 0;
+
+   	h4 {
+   		margin: 0;
+   	}
+
+   	ul {
+   		margin: 0;
+   		padding: 0 0 1em 0;
+
+   		li {
+   			display: inline-block;
+   			list-style: none;
+   			margin: 0 3em 0 0;
+   			padding: 0;
+
+   			label {
+   				cursor: pointer;
+   			}
+
+   			input[type=text]{
+   				width: 100%;
+   				color: #333;
+   			}
+   		}
+   	}
+
+   	&.pa-text-group, &.pa-select-group, &.pa-zip-group {
+   		ul li {
+   			display: block;
+   			margin-right: 0;
+
+   			input {
+   				width: 100%;
+   				background: #F9F9F9;
+   				border: 1px solid #CCC;
+   				border-radius: 3px;
+   				font-size: 1em;
+   				line-height: 1;
+   				padding: .75em;
+   				outline: none;
+   				text-transform: none;
+   				font-style: none;
+   				font-weight: 300;
+
+   				&:focus {
+   					background: #FFF;
+   					border: 1px solid $orange;
+   					box-shadow: 0 0 2px $orange;
+   				}
+   			}
+
+   			select {
+   				width: 100%;
+   				background: #F9F9F9;
+   				border: 1px solid #CCC;
+   				border-radius: 3px;
+   				font-size: 1em;
+   				padding: .75em;
+   				outline: none;
+   				-webkit-appearance: none;
+   				-webkit-border-radius: 0px;
+   				text-transform: none;
+
+   				&:focus {
+   					background: #FFF;
+   					border: 1px solid $orange;
+   					box-shadow: 0 0 2px $orange;
+   				}
+   			}
+   		}
+   	}
+
+   	&.pa-zip-group {
+   		input {
+			max-width: 230px;
+			color: #333;
+
+			@media (max-width: 600px) {
+			  	max-width: none;
+			}
+		}
+	}
+}
+
+
+/* ============================================
+   Step 1 Errors
+   ============================================ */
+
+.pa-field-group h4 .item-error {
+	float: right;
+}
+
+.pa-form-wrap .pa-field-group p.message {
+	float: left;
+	width: 32%;
+}
+
+.pa-form-wrap input.user-error {
+	border: 1px solid #FF6464;
+}
+
+   span.error-message {display: none;}
+
+   .error-group {
+   	background: #FFF3F3;
+   	transition: all 100ms linear;
+
+   	.error-message {
+   		display: block;
+   		font-style: italic;
+   		color: #FF6464;
+   		font-size: .7em;
+   		font-weight: 600;
+   	}
+   }
+
+
+
+/* ============================================
+   Step 1 Button
+   ============================================ */
+
+#pa-calc {
+
+   	p.pa-form-button, p.cost-form-submit {
+   		margin: 2em 0 1em;
+   		text-align: center;		
+
+   		input.pa-calc-button, input.cost-submit {
+   			transition: all 50ms linear;
+   			background: $orange;
+   			border: 0;
+   			border-top: 2px solid $orange;
+   			border-bottom: 2px solid $dark-orange;
+   			border-radius: 3px;
+   			box-shadow: none;
+   			cursor: pointer;
+   			display: inline-block;
+   			font-weight: 400 !important;
+   			color: #FFFFFF;
+   			padding: .75em 2em;
+   			font-size: 1.2em;
+   			font-weight: 500;
+   			line-height: 1;
+   			//letter-spacing: 0;
+   			text-shadow: 2px 2px rgba(0,0,0,.05);
+   			text-transform: none;
+   			outline: none;
+
+
+   			&:hover, &:active {
+   				background: $light-orange;
+   				border-top: 2px solid $light-orange;
+   				border-bottom: 2px solid $orange;
+   			}
+   		}
+
+   		.error-message {
+   			display: block;
+   			color: #FF6464;
+   			margin-top: .5em;
+   			font-weight: 600;
+   			font-style: italic;
+   		}
+   }
+
+   p.cost-form-submit {
+   		margin: 0;
+
+   		input.cost-submit {
+   			font-size: 1em;
+   			width: 100%;
+   			padding: .75em .25em;
+   			text-transform: none;
+
+   		}
+   }
+}
+
+
+/* ==========================================================================
+   STEP 2
+   ========================================================================== */
+
+   #pa-calc.pa-calc-step2 {}
+
+
+/* ==========================================================================
+   STEP 3
+   ========================================================================== */
+
+   #pa-calc.pa-calc-step3 {}
+
+
+
+/* ==========================================================================
+   FINE PRINT
+   ========================================================================== */
+
+.fine-print {}
+
+.fine-print p {
+	font-size: 11px;
+	line-height: 13px;
+	font-style: italic;
+	color: #777;
+	margin: 0 0 5px;
+}
+
+
+/* ==========================================================================
+   STEP 2 & 3
+   ========================================================================== */
+
+	.pa-return-column {
+		float: left;
+		display: block;
+	}
+
+
+/* ==========================================================================
+   STEP 2 - Submitted Data - Left side
+   ========================================================================== */
+
+	#pa-calc .column-submitted-data {
+		width: 20%;
+		margin: 0;
+		padding: 0;
+
+		@media (max-width: 900px) {
+		  	display: none;
+		}
+
+		.pa-column-inner-wrap {
+			background: #EDEDED;
+			color: #666;
+			margin: 0 1em 0 0;
+			padding: 2em 1em 1em;
+			border: 1px solid #DDD;
+		}
+
+		.pa-column-details {
+			font-size: .8em;
+
+			h4 {
+				line-height: 1.2;
+				margin: 0 0 .1em;
+			}
+
+			ul {
+				margin: 0 0 1em 0;
+				list-style: none;
+				padding: 0;
+
+				li {
+					list-style: none;
+					padding: 0;
+					margin: 0 0 .25em 0;
+
+					&:before {
+						content: url(../img/check-icon.png);
+						position: relative;
+						left: 0;
+						top: 0;
+						margin-right: 3px;
+					}
+				}
+			}
+
+			li {
+				margin: 0 0 5px;
+			}
+		}
+	}
+
+
+
+
+/* ==========================================================================
+   STEP 2 - CENTER
+   ========================================================================== */
+
+	#pa-calc .column-providers-return {
+		width: 60%;
+		background: #FFF;
+		border: 1px solid #DDD;
+
+		@media (max-width: 900px) {
+		  	width: 75%;
+		}
+
+		@media (max-width: 750px) {
+		  	width: 100%;
+		}
+
+		.pa-column-inner-wrap {
+			padding: 1em;
+		}
+
+		h5 {
+			color: #333;
+			margin-top: 1em;
+		}
+
+		.pa-column-details {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.pa-cost-form {
+			width: 50%;
+			margin: 0;
+			padding: 0 1em 0 0;
+
+			@media (max-width: 500px) {
+			  	width: 100%;
+			  	padding: 0;
+			}
+		}
+
+		.pa-doctors-details {
+			width: 50%;
+			margin: 0;
+			padding: 0 0 0 1em;
+
+
+			@media (max-width: 500px) {
+			  	width: 100%;
+			  	padding: 0;
+			}
+		}
+
+	}
+
+
+/* ==========================================================================
+   STEP 2 - CENTER - FORM
+   ========================================================================== */
+	
+
+	form.pa-cost-submit {
+		margin-bottom: 1em;
+
+		.cost-form-field {
+			width: 100%;
+			margin: 0 0 .25em;
+
+   			input {
+   				width: 100%;
+   				background: #F9F9F9;
+   				border: 1px solid #CCC;
+   				border-radius: 3px;
+   				font-size: 1em;
+   				padding: .75em;
+   				outline: none;
+   				text-transform: none;
+   				font-style: normal !important;
+   				font-weight: 300;
+
+   				&:focus {
+   					background: #FFF;
+   					border: 1px solid $orange;
+   					box-shadow: 0 0 2px $orange;
+   				}
+   			}
+		}
+
+		p.cost-form-submit {
+			text-align: center;
+			margin-bottom: 1em;
+		}
+	}
+
+
+	/* doctor list */
+
+	.no-doctors-nearby {
+		padding: 0 20px;
+	}
+
+	.no-doctors-nearby img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	#pa-calc .provider-list {
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		display: inline-block;
+
+		.provider-single {
+			margin-bottom: 2em;
+			display: table;
+
+			&.provider-unchecked {
+				zoom: 1;
+				filter: alpha(opacity = 50);
+				opacity: 0.5;
+
+			}
+		}
+
+		.provider-single {
+
+			.provider-checkbox {
+				display: table-cell;
+				padding: 0 .5em 0 0;
+				//padding-top: 18px;
+				padding-top: 25px;
+
+				input.provider-choice {
+				}
+
+			}
+
+			.provider-image {
+				display: table-cell;
+				vertical-align: top;
+				padding: 0 .5em 0 0;
+
+				.headshot {
+					//border-radius: 50%;
+					width: 60px;
+					//height: 60px;
+					//overflow: hidden;
+
+					img {
+						display: block;
+						min-width: 100%;
+					}
+				}
+			}
+
+			.provider-details {
+				display: table-cell;
+				vertical-align: top;
+				overflow: hidden;
+
+				h6 {
+					color: $dark-orange;
+					margin: 0;
+					font-size: .9em;
+				}
+
+				p {
+					margin: 0;
+					font-size: .8em;
+				}
+
+				.rating {
+					margin: 0;
+
+					span {
+						margin: 0 10px 0 0;
+						position: relative;
+						bottom: 9px;
+					}
+				}
+
+				.phone {
+					margin: .1em 0;
+
+					a {
+						transition: none;
+						color: #666;
+						text-decoration: none;
+						font-weight: 500;
+
+						&:hover {
+							color: $orange;
+						}
+					}
+				}
+
+				.provider-links {
+					overflow: hidden;
+					margin: 0 0 3px;
+
+					.provider-profile {
+						float: left;
+					}
+					.provider-website {
+						float: right;
+					}
+				}
+				.address {
+					margin: 0;
+					color: #666;
+				}
+			}
+		}
+	}
+
+
+/* ==========================================================================
+   Step 2 Almost Done
+   ========================================================================== */
+
+	#pa-calc .column-almost-done {
+		float: right;
+		width: 20%;
+		margin: 0;
+		padding: 0;
+
+		@media (max-width: 900px) {
+		  	width: 25%;
+		}
+
+		@media (max-width: 750px) {
+		  	display: none;
+		}
+
+		.pa-column-inner-wrap {
+			background: $light-orange;
+			color: #FFFFFF;
+			margin-left: 1em;
+			padding: 2em 1em;
+			text-shadow: 1px 1px rgba(0,0,0,.1);
+		}
+
+		p, h4 {
+			color: #FFFFFF;
+			margin: 0;
+			line-height: 1.4;
+		}
+	}
+
+
+/* ==========================================================================
+   STEP 3
+   ========================================================================== */
+
+
+	#pa-calc .column-cost-info {
+		width: 49%;
+		margin: 0 0 1em 0;
+		background: #FFF;
+		border: 1px solid #DDD;
+
+		@media (max-width: 800px) {
+		  	width: 100%;
+		}
+	}
+
+	#pa-calc .column-next-steps {
+		width: 49%;
+		margin: 0 0 1em 2%;
+		background: #FFF;
+		border: 1px solid #DDD;
+
+		@media (max-width: 800px) {
+		  	width: 100%;
+		  	margin-left: 0;
+		}
+
+		.pa-prosper-final {
+			margin-bottom: 2em;
+
+			p {
+				font-weight: 600;
+				margin: 0;
+			}
+		}
+
+		.provider-wrapper {
+			text-align: center;
+		}
+
+		.provider-list {
+			margin: 0;
+		}
+	}
+
+
+	#pa-calc .column-cost-info, .column-next-steps {
+		.pa-column-header {
+			padding: 0 2em;
+
+			h3 {
+				text-transform: uppercase;
+			}
+		}
+
+		.pa-column-details {
+			padding: 0 2em;
+		}
+	}
+
+
+	/* form step three */
+
+	.pa-final-steps .pa-return-column {
+		display: inline-block;
+		vertical-align: top;
+		float: none;
+	}
+
+
+/* line item setup for calculations */
+
+.pa-treatment-table {
+	clear: both;
+}
+
+.pa-treatment-table p {
+	-webkit-hyphens: none;
+	-epub-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	-o-hyphens: none;
+	hyphens: none;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.pa-treatment-table p span.cost-amt {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.pa-return-column .pa-column-details ul.treatment-line-items {
+	list-style: none;
+	margin: 0 0 40px 0;
+	padding: 0 10px;
+}
+
+.pa-return-column .pa-column-details ul.treatment-line-items li {
+	overflow: hidden;
+	margin: 0 0 3px;
+	padding: 0 5px 3px;
+}
+
+.pa-return-column .pa-column-details ul.treatment-line-items li.line-item {
+	border-bottom: 1px solid #efefef;
+}
+
+.pa-return-column .pa-column-details ul.treatment-line-items li.line-total {
+	padding: 5px 5px 3px 5px;
+}
+
+.pa-return-column .pa-column-details ul.treatment-line-items li span.item-text {
+	float: left;
+	width: 75%;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.pa-return-column .pa-column-details ul.treatment-line-items li span.item-cost {
+	float: right;
+	width: 20%;
+	text-align: right;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.pa-return-column .pa-column-details ul.treatment-line-items li.line-total span.item-text {
+	font-weight: 700;
+}
+
+.pa-return-column .pa-column-details ul.treatment-line-items li.line-total span.item-cost {
+	color: #FF0000;
+	//background: url(../img/equal-icon.png) no-repeat left center;
+}
+
+
+
+/* ==========================================================================
+   STEP 3 - PROSPER APPROVAL
+   ========================================================================== */
+
+
+#pa-calc .column-cost-info {
+
+	.pa-prosper-approval {
+		clear: both;
+		display: block;
+		margin: 0 auto 2em;
+		padding: 2em;
+		border-radius: 3px;
+		background: #EEE;
+	}
+
+	.pa-prosper-approval img.prosper-logo-sm {
+		border-radius: 0;
+		box-shadow: none;
+		float: right;
+		margin: 10px 0 .5em;
+	}
+
+	.pa-prosper-approval h5 {
+		color: #333;
+		font-size: 1.5em;
+		font-weight: 600;
+		margin: 0 0 .5em 0;
+		display: inline-block;
+	}
+
+	.pa-prosper-approval p {
+		clear: both;
+		margin: 0 0 1em 0;
+	}
+
+
+	.pa-prosper-approval a.prosper-button {
+		transition: all 50ms linear;
+		background: $orange;
+		border: 0;
+		border-top: 2px solid $orange;
+		border-bottom: 2px solid $dark-orange;
+		border-radius: 3px;
+		box-shadow: none;
+		cursor: pointer;
+		display: block;
+		font-weight: 400 !important;
+		color: #FFFFFF;
+		padding: .75em 2em;
+		font-size: 1.2em;
+		font-weight: 500;
+		line-height: 1;
+		text-align: center;
+		text-shadow: 2px 2px rgba(0,0,0,.05);
+		text-transform: none;
+		outline: none;
+		text-decoration: none;
+
+
+		&:hover, &:active {
+			background: $light-orange;
+			border-top: 2px solid $light-orange;
+			border-bottom: 2px solid $orange;
+		}
+
+	}
+
+}
+
+
+/* ==========================================================================
+   STARS
+   ========================================================================== */
+
+   i.pa-starlg {
+   	background-image: url(../img/star-sprite-large.png);
+   	display: inline-block;
+   	height: 22px;
+   	width: 82px;
+   	background-position: 0 0;
+   	background-repeat: no-repeat;
+   }
+
+   i.pa-starlg-0    { background-position: 0 0; }
+   i.pa-starlg-1    { background-position: 0 -22px; }
+   i.pa-starlg-2    { background-position: 0 -66px; }
+   i.pa-starlg-3    { background-position: 0 -108px; }
+   i.pa-starlg-4    { background-position: 0 -152px; }
+   i.pa-starlg-5    { background-position: 0 -196px; }
+
+   i.pa-starlg-05    { background-position: 0 -22px; }
+   i.pa-starlg-15    { background-position: 0 -44px; }
+   i.pa-starlg-25    { background-position: 0 -88px; }
+   i.pa-starlg-35    { background-position: 0 -130px; }
+   i.pa-starlg-45    { background-position: 0 -174px; }
+
+
+
+/* ==========================================================================
+   PROGRESS MASTHEAD
+   ========================================================================== */
+
+#pa-calc {
+   	.progress-masthead {
+   		clear: all;
+   		position: relative;
+   		padding: 0;
+   		margin: 0 0 40px 0;
+   	}
+
+   	.progress-bar {
+   		height: 14px;
+   		border-radius: 7px;
+   		background: #DDD;
+   		margin: 20px  0;
+   	}
+
+   	.progress-masthead .progress-column {
+   		width: 33.333%;
+   		display: inline-block;
+   		vertical-align: top;
+   		position: relative;
+   	}
+
+   	.progress-masthead .progress-column p.step-title {
+   		text-transform: uppercase;
+   		font-size: 18px;
+   		line-height: 1.4;
+   		color: #333;
+   		margin: 0;
+   		padding: 0;
+   		font-weight: 600;
+   	}
+
+   	.progress-masthead .progress-column p.step-desc {
+   		font-size: 12px;
+   		line-height: 1;
+   		color: #888;
+   		margin: 0;
+   		padding: 0;
+		  white-space: pre;
+
+   		strong {
+   			color: $orange;
+   		}
+
+
+		@media (max-width: 500px) {
+		  	font-size: .6em;
+
+		  	strong {
+		  		display: none;
+		  	}
+		}
+
+   	}
+
+   	.progress-masthead .progress-one {
+   		text-align: left;
+   	}
+   	.progress-masthead .progress-two {
+   		text-align: center;
+   	}
+   	.progress-masthead .progress-three {
+   		float: right;
+   		text-align: right;
+   	}
+
+   	.progress-one:before, .progress-three:before, .progress-two:before {
+   		content: '';
+   		position: absolute;
+   		bottom: 0;
+   		z-index: 500;
+   		width: 28px;
+   		height: 28px;
+   		background: $light-orange;
+   		border-radius: 50%;
+   		border: 7px solid #DDD;
+   		margin-bottom: -41px;
+   	}
+
+   	.progress-one:before {
+   		left: 0;
+   	}
+
+   	.progress-three:before {
+   		right: 0;
+   	}
+
+   	.progress-two:before {
+   		left: 50%;
+   		margin-left: -15px;
+   	}
+
+   	.masthead-step-two .progress-three:before {
+   		background: #DDD;
+
+   	}
+
+   	.masthead-step-two:after {
+   		position: absolute;
+   		left: 8px;
+   		right: 50.1%;
+   		bottom: 4px;
+   		border-bottom: 6px solid $light-orange;
+   		border-radius: 3px;
+   		content: '';
+   		z-index: 501;
+   	}
+
+   	.masthead-step-three:after {
+   		position: absolute;
+   		left: 8px;
+   		right: 8px;
+   		bottom: 4px;
+   		border-bottom: 6px solid $light-orange;
+   		border-radius: 3px;
+   		content: '';
+   		z-index: 501;
+   	}
+
+}
+
+

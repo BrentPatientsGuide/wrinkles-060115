@@ -1,0 +1,787 @@
+/* basic front-end style for PA calc */
+/* ==========================================================================
+   Responsive 
+   ========================================================================== */
+.content-med-item-wrap .entry-content-slim {
+  width: 90% !important; }
+
+/* ==========================================================================
+   Typography 
+   ========================================================================== */
+#pa-calc {
+  color: #333333;
+  font-weight: 300;
+  overflow: hidden;
+  line-height: 1.4; }
+  #pa-calc ::-webkit-input-placeholder {
+    color: #999;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: none; }
+  #pa-calc :-moz-placeholder {
+    color: #999;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: none; }
+  #pa-calc ::-moz-placeholder {
+    color: #999;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: none; }
+  #pa-calc :-ms-input-placeholder {
+    color: #999;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: none; }
+  #pa-calc h1, #pa-calc h2, #pa-calc h3, #pa-calc h4, #pa-calc h4, #pa-calc h6 {
+    color: #333;
+    font-weight: 500; }
+  #pa-calc h1 {
+    font-size: 2em;
+    margin: 0 0.67em 0; }
+  #pa-calc h2 {
+    font-size: 1.8em;
+    margin: 0.83em 0; }
+  #pa-calc h3 {
+    font-size: 1.5em;
+    margin: 1em 0 .5em; }
+  #pa-calc h4 {
+    font-size: 1.2em;
+    margin: 1em 0 0; }
+  #pa-calc h5 {
+    margin: 1em 0; }
+  #pa-calc h6 {
+    margin: 1em 0; }
+  #pa-calc p {
+    margin: 1em 0;
+    font-weight: 300; }
+
+/* ==========================================================================
+   Calculator Container
+   ========================================================================== */
+#pa-calc button,
+#pa-calc input,
+#pa-calc select,
+#pa-calc textarea {
+  font-family: sans-serif;
+  font-weight: 300;
+  margin: 0; }
+
+#pa-calc {
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  margin: 2em 0; }
+  #pa-calc *, #pa-calc *:before, #pa-calc *:after {
+    -moz-box-sizing: inherit;
+         box-sizing: inherit; }
+
+/* ==========================================================================
+   STEP 1
+   ========================================================================== */
+#pa-calc.pa-calc-step1 .step-one-inner {
+  padding: 1em;
+  margin: 2em 0 0;
+  border: 1px solid #DDD;
+  background: #FFFFFF; }
+#pa-calc.pa-calc-step1 h4:after {
+  content: " *";
+  color: #ED8F22; }
+#pa-calc.pa-calc-step1 .section-title {
+  margin-top: .5em;
+  padding: 0 1em; }
+  #pa-calc.pa-calc-step1 .section-title h3 {
+    margin: 0 0 .5em; }
+
+/* ============================================
+   Step 1 Calculator Fields
+   ============================================ */
+#pa-calc .calc-fields {
+  margin: 0 0 4px 0;
+  padding: 0; }
+  #pa-calc .calc-fields .pa-field-group {
+    padding: .5em 1em 0; }
+  #pa-calc .calc-fields h4 {
+    margin: 0; }
+  #pa-calc .calc-fields .calc-field-group {
+    -webkit-transition: all 100ms linear;
+            transition: all 100ms linear;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+    #pa-calc .calc-fields .calc-field-group li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 0 1em 0;
+      padding: 0 1em 0 0;
+      width: 130px;
+      vertical-align: top; }
+      @media (max-width: 400px) {
+        #pa-calc .calc-fields .calc-field-group li {
+          width: 50%;
+          padding: 0; } }
+      #pa-calc .calc-fields .calc-field-group li label {
+        -webkit-transition: all 100ms linear;
+                transition: all 100ms linear;
+        cursor: pointer;
+        margin: 0;
+        padding: 0; }
+      #pa-calc .calc-fields .calc-field-group li img.calc-thumb {
+        -webkit-transition: all 100ms linear;
+                transition: all 100ms linear;
+        border: 2px solid #EEE;
+        border-radius: 0;
+        box-shadow: none;
+        cursor: pointer;
+        box-shadow: none;
+        display: block;
+        width: 60px;
+        opacity: .8; }
+        #pa-calc .calc-fields .calc-field-group li img.calc-thumb:hover {
+          opacity: 1; }
+        #pa-calc .calc-fields .calc-field-group li img.calc-thumb.checked {
+          border: 2px solid #ED8F22;
+          opacity: 1;
+          box-shadow: 0 0 2px #ED8F22; }
+
+/* ============================================
+   FIELD GROUPS
+   ============================================ */
+#pa-calc .extra-fields .pa-field-group {
+  padding: .5em 1em 0;
+  margin: 0 0 4px 0; }
+  #pa-calc .extra-fields .pa-field-group h4 {
+    margin: 0; }
+  #pa-calc .extra-fields .pa-field-group ul {
+    margin: 0;
+    padding: 0 0 1em 0; }
+    #pa-calc .extra-fields .pa-field-group ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 3em 0 0;
+      padding: 0; }
+      #pa-calc .extra-fields .pa-field-group ul li label {
+        cursor: pointer; }
+      #pa-calc .extra-fields .pa-field-group ul li input[type=text] {
+        width: 100%;
+        color: #333; }
+  #pa-calc .extra-fields .pa-field-group.pa-text-group ul li, #pa-calc .extra-fields .pa-field-group.pa-select-group ul li, #pa-calc .extra-fields .pa-field-group.pa-zip-group ul li {
+    display: block;
+    margin-right: 0; }
+    #pa-calc .extra-fields .pa-field-group.pa-text-group ul li input, #pa-calc .extra-fields .pa-field-group.pa-select-group ul li input, #pa-calc .extra-fields .pa-field-group.pa-zip-group ul li input {
+      width: 100%;
+      background: #F9F9F9;
+      border: 1px solid #CCC;
+      border-radius: 3px;
+      font-size: 1em;
+      line-height: 1;
+      padding: .75em;
+      outline: none;
+      text-transform: none;
+      font-style: none;
+      font-weight: 300; }
+      #pa-calc .extra-fields .pa-field-group.pa-text-group ul li input:focus, #pa-calc .extra-fields .pa-field-group.pa-select-group ul li input:focus, #pa-calc .extra-fields .pa-field-group.pa-zip-group ul li input:focus {
+        background: #FFF;
+        border: 1px solid #ED8F22;
+        box-shadow: 0 0 2px #ED8F22; }
+    #pa-calc .extra-fields .pa-field-group.pa-text-group ul li select, #pa-calc .extra-fields .pa-field-group.pa-select-group ul li select, #pa-calc .extra-fields .pa-field-group.pa-zip-group ul li select {
+      width: 100%;
+      background: #F9F9F9;
+      border: 1px solid #CCC;
+      border-radius: 3px;
+      font-size: 1em;
+      padding: .75em;
+      outline: none;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0px;
+      text-transform: none; }
+      #pa-calc .extra-fields .pa-field-group.pa-text-group ul li select:focus, #pa-calc .extra-fields .pa-field-group.pa-select-group ul li select:focus, #pa-calc .extra-fields .pa-field-group.pa-zip-group ul li select:focus {
+        background: #FFF;
+        border: 1px solid #ED8F22;
+        box-shadow: 0 0 2px #ED8F22; }
+  #pa-calc .extra-fields .pa-field-group.pa-zip-group input {
+    max-width: 230px;
+    color: #333; }
+    @media (max-width: 600px) {
+      #pa-calc .extra-fields .pa-field-group.pa-zip-group input {
+        max-width: none; } }
+
+/* ============================================
+   Step 1 Errors
+   ============================================ */
+.pa-field-group h4 .item-error {
+  float: right; }
+
+.pa-form-wrap .pa-field-group p.message {
+  float: left;
+  width: 32%; }
+
+.pa-form-wrap input.user-error {
+  border: 1px solid #FF6464; }
+
+span.error-message {
+  display: none; }
+
+.error-group {
+  background: #FFF3F3;
+  -webkit-transition: all 100ms linear;
+          transition: all 100ms linear; }
+  .error-group .error-message {
+    display: block;
+    font-style: italic;
+    color: #FF6464;
+    font-size: .7em;
+    font-weight: 600; }
+
+/* ============================================
+   Step 1 Button
+   ============================================ */
+#pa-calc p.pa-form-button, #pa-calc p.cost-form-submit {
+  margin: 2em 0 1em;
+  text-align: center; }
+  #pa-calc p.pa-form-button input.pa-calc-button, #pa-calc p.pa-form-button input.cost-submit, #pa-calc p.cost-form-submit input.pa-calc-button, #pa-calc p.cost-form-submit input.cost-submit {
+    -webkit-transition: all 50ms linear;
+            transition: all 50ms linear;
+    background: #ED8F22;
+    border: 0;
+    border-top: 2px solid #ED8F22;
+    border-bottom: 2px solid #e38212;
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400 !important;
+    color: #FFFFFF;
+    padding: .75em 2em;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+    text-transform: none;
+    outline: none; }
+    #pa-calc p.pa-form-button input.pa-calc-button:hover, #pa-calc p.pa-form-button input.pa-calc-button:active, #pa-calc p.pa-form-button input.cost-submit:hover, #pa-calc p.pa-form-button input.cost-submit:active, #pa-calc p.cost-form-submit input.pa-calc-button:hover, #pa-calc p.cost-form-submit input.pa-calc-button:active, #pa-calc p.cost-form-submit input.cost-submit:hover, #pa-calc p.cost-form-submit input.cost-submit:active {
+      background: #ef9b3a;
+      border-top: 2px solid #ef9b3a;
+      border-bottom: 2px solid #ED8F22; }
+  #pa-calc p.pa-form-button .error-message, #pa-calc p.cost-form-submit .error-message {
+    display: block;
+    color: #FF6464;
+    margin-top: .5em;
+    font-weight: 600;
+    font-style: italic; }
+#pa-calc p.cost-form-submit {
+  margin: 0; }
+  #pa-calc p.cost-form-submit input.cost-submit {
+    font-size: 1em;
+    width: 100%;
+    padding: .75em .25em;
+    text-transform: none; }
+
+/* ==========================================================================
+   STEP 2
+   ========================================================================== */
+/* ==========================================================================
+   STEP 3
+   ========================================================================== */
+/* ==========================================================================
+   FINE PRINT
+   ========================================================================== */
+.fine-print p {
+  font-size: 11px;
+  line-height: 13px;
+  font-style: italic;
+  color: #777;
+  margin: 0 0 5px; }
+
+/* ==========================================================================
+   STEP 2 & 3
+   ========================================================================== */
+.pa-return-column {
+  float: left;
+  display: block; }
+
+/* ==========================================================================
+   STEP 2 - Submitted Data - Left side
+   ========================================================================== */
+#pa-calc .column-submitted-data {
+  width: 20%;
+  margin: 0;
+  padding: 0; }
+  @media (max-width: 900px) {
+    #pa-calc .column-submitted-data {
+      display: none; } }
+  #pa-calc .column-submitted-data .pa-column-inner-wrap {
+    background: #EDEDED;
+    color: #666;
+    margin: 0 1em 0 0;
+    padding: 2em 1em 1em;
+    border: 1px solid #DDD; }
+  #pa-calc .column-submitted-data .pa-column-details {
+    font-size: .8em; }
+    #pa-calc .column-submitted-data .pa-column-details h4 {
+      line-height: 1.2;
+      margin: 0 0 .1em; }
+    #pa-calc .column-submitted-data .pa-column-details ul {
+      margin: 0 0 1em 0;
+      list-style: none;
+      padding: 0; }
+      #pa-calc .column-submitted-data .pa-column-details ul li {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 .25em 0; }
+        #pa-calc .column-submitted-data .pa-column-details ul li:before {
+          content: url(../img/check-icon.png);
+          position: relative;
+          left: 0;
+          top: 0;
+          margin-right: 3px; }
+    #pa-calc .column-submitted-data .pa-column-details li {
+      margin: 0 0 5px; }
+
+/* ==========================================================================
+   STEP 2 - CENTER
+   ========================================================================== */
+#pa-calc .column-providers-return {
+  width: 60%;
+  background: #FFF;
+  border: 1px solid #DDD; }
+  @media (max-width: 900px) {
+    #pa-calc .column-providers-return {
+      width: 75%; } }
+  @media (max-width: 750px) {
+    #pa-calc .column-providers-return {
+      width: 100%; } }
+  #pa-calc .column-providers-return .pa-column-inner-wrap {
+    padding: 1em; }
+  #pa-calc .column-providers-return h5 {
+    color: #333;
+    margin-top: 1em; }
+  #pa-calc .column-providers-return .pa-column-details {
+    display: inline-block;
+    vertical-align: top; }
+  #pa-calc .column-providers-return .pa-cost-form {
+    width: 50%;
+    margin: 0;
+    padding: 0 1em 0 0; }
+    @media (max-width: 500px) {
+      #pa-calc .column-providers-return .pa-cost-form {
+        width: 100%;
+        padding: 0; } }
+  #pa-calc .column-providers-return .pa-doctors-details {
+    width: 50%;
+    margin: 0;
+    padding: 0 0 0 1em; }
+    @media (max-width: 500px) {
+      #pa-calc .column-providers-return .pa-doctors-details {
+        width: 100%;
+        padding: 0; } }
+
+/* ==========================================================================
+   STEP 2 - CENTER - FORM
+   ========================================================================== */
+form.pa-cost-submit {
+  margin-bottom: 1em; }
+  form.pa-cost-submit .cost-form-field {
+    width: 100%;
+    margin: 0 0 .25em; }
+    form.pa-cost-submit .cost-form-field input {
+      width: 100%;
+      background: #F9F9F9;
+      border: 1px solid #CCC;
+      border-radius: 3px;
+      font-size: 1em;
+      padding: .75em;
+      outline: none;
+      text-transform: none;
+      font-style: normal !important;
+      font-weight: 300; }
+      form.pa-cost-submit .cost-form-field input:focus {
+        background: #FFF;
+        border: 1px solid #ED8F22;
+        box-shadow: 0 0 2px #ED8F22; }
+  form.pa-cost-submit p.cost-form-submit {
+    text-align: center;
+    margin-bottom: 1em; }
+
+/* doctor list */
+.no-doctors-nearby {
+  padding: 0 20px; }
+
+.no-doctors-nearby img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none; }
+
+#pa-calc .provider-list {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: inline-block; }
+  #pa-calc .provider-list .provider-single {
+    margin-bottom: 2em;
+    display: table; }
+    #pa-calc .provider-list .provider-single.provider-unchecked {
+      zoom: 1;
+      filter: alpha(opacity=50);
+      opacity: 0.5; }
+  #pa-calc .provider-list .provider-single .provider-checkbox {
+    display: table-cell;
+    padding: 0 .5em 0 0;
+    padding-top: 25px; }
+  #pa-calc .provider-list .provider-single .provider-image {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 .5em 0 0; }
+    #pa-calc .provider-list .provider-single .provider-image .headshot {
+      width: 60px; }
+      #pa-calc .provider-list .provider-single .provider-image .headshot img {
+        display: block;
+        min-width: 100%; }
+  #pa-calc .provider-list .provider-single .provider-details {
+    display: table-cell;
+    vertical-align: top;
+    overflow: hidden; }
+    #pa-calc .provider-list .provider-single .provider-details h6 {
+      color: #e38212;
+      margin: 0;
+      font-size: .9em; }
+    #pa-calc .provider-list .provider-single .provider-details p {
+      margin: 0;
+      font-size: .8em; }
+    #pa-calc .provider-list .provider-single .provider-details .rating {
+      margin: 0; }
+      #pa-calc .provider-list .provider-single .provider-details .rating span {
+        margin: 0 10px 0 0;
+        position: relative;
+        bottom: 9px; }
+    #pa-calc .provider-list .provider-single .provider-details .phone {
+      margin: .1em 0; }
+      #pa-calc .provider-list .provider-single .provider-details .phone a {
+        -webkit-transition: none;
+                transition: none;
+        color: #666;
+        text-decoration: none;
+        font-weight: 500; }
+        #pa-calc .provider-list .provider-single .provider-details .phone a:hover {
+          color: #ED8F22; }
+    #pa-calc .provider-list .provider-single .provider-details .provider-links {
+      overflow: hidden;
+      margin: 0 0 3px; }
+      #pa-calc .provider-list .provider-single .provider-details .provider-links .provider-profile {
+        float: left; }
+      #pa-calc .provider-list .provider-single .provider-details .provider-links .provider-website {
+        float: right; }
+    #pa-calc .provider-list .provider-single .provider-details .address {
+      margin: 0;
+      color: #666; }
+
+/* ==========================================================================
+   Step 2 Almost Done
+   ========================================================================== */
+#pa-calc .column-almost-done {
+  float: right;
+  width: 20%;
+  margin: 0;
+  padding: 0; }
+  @media (max-width: 900px) {
+    #pa-calc .column-almost-done {
+      width: 25%; } }
+  @media (max-width: 750px) {
+    #pa-calc .column-almost-done {
+      display: none; } }
+  #pa-calc .column-almost-done .pa-column-inner-wrap {
+    background: #ef9b3a;
+    color: #FFFFFF;
+    margin-left: 1em;
+    padding: 2em 1em;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1); }
+  #pa-calc .column-almost-done p, #pa-calc .column-almost-done h4 {
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.4; }
+
+/* ==========================================================================
+   STEP 3
+   ========================================================================== */
+#pa-calc .column-cost-info {
+  width: 49%;
+  margin: 0 0 1em 0;
+  background: #FFF;
+  border: 1px solid #DDD; }
+  @media (max-width: 800px) {
+    #pa-calc .column-cost-info {
+      width: 100%; } }
+
+#pa-calc .column-next-steps {
+  width: 49%;
+  margin: 0 0 1em 2%;
+  background: #FFF;
+  border: 1px solid #DDD; }
+  @media (max-width: 800px) {
+    #pa-calc .column-next-steps {
+      width: 100%;
+      margin-left: 0; } }
+  #pa-calc .column-next-steps .pa-prosper-final {
+    margin-bottom: 2em; }
+    #pa-calc .column-next-steps .pa-prosper-final p {
+      font-weight: 600;
+      margin: 0; }
+  #pa-calc .column-next-steps .provider-wrapper {
+    text-align: center; }
+  #pa-calc .column-next-steps .provider-list {
+    margin: 0; }
+
+#pa-calc .column-cost-info .pa-column-header, .column-next-steps .pa-column-header {
+  padding: 0 2em; }
+  #pa-calc .column-cost-info .pa-column-header h3, .column-next-steps .pa-column-header h3 {
+    text-transform: uppercase; }
+#pa-calc .column-cost-info .pa-column-details, .column-next-steps .pa-column-details {
+  padding: 0 2em; }
+
+/* form step three */
+.pa-final-steps .pa-return-column {
+  display: inline-block;
+  vertical-align: top;
+  float: none; }
+
+/* line item setup for calculations */
+.pa-treatment-table {
+  clear: both; }
+
+.pa-treatment-table p {
+  -webkit-hyphens: none;
+  -epub-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+  font-size: 16px;
+  line-height: 20px; }
+
+.pa-treatment-table p span.cost-amt {
+  font-size: 18px;
+  font-weight: 700; }
+
+.pa-return-column .pa-column-details ul.treatment-line-items {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0 10px; }
+
+.pa-return-column .pa-column-details ul.treatment-line-items li {
+  overflow: hidden;
+  margin: 0 0 3px;
+  padding: 0 5px 3px; }
+
+.pa-return-column .pa-column-details ul.treatment-line-items li.line-item {
+  border-bottom: 1px solid #efefef; }
+
+.pa-return-column .pa-column-details ul.treatment-line-items li.line-total {
+  padding: 5px 5px 3px 5px; }
+
+.pa-return-column .pa-column-details ul.treatment-line-items li span.item-text {
+  float: left;
+  width: 75%;
+  font-style: italic;
+  font-weight: 300; }
+
+.pa-return-column .pa-column-details ul.treatment-line-items li span.item-cost {
+  float: right;
+  width: 20%;
+  text-align: right;
+  font-weight: 700;
+  font-size: 16px; }
+
+.pa-return-column .pa-column-details ul.treatment-line-items li.line-total span.item-text {
+  font-weight: 700; }
+
+.pa-return-column .pa-column-details ul.treatment-line-items li.line-total span.item-cost {
+  color: #FF0000; }
+
+/* ==========================================================================
+   STEP 3 - PROSPER APPROVAL
+   ========================================================================== */
+#pa-calc .column-cost-info .pa-prosper-approval {
+  clear: both;
+  display: block;
+  margin: 0 auto 2em;
+  padding: 2em;
+  border-radius: 3px;
+  background: #EEE; }
+#pa-calc .column-cost-info .pa-prosper-approval img.prosper-logo-sm {
+  border-radius: 0;
+  box-shadow: none;
+  float: right;
+  margin: 10px 0 .5em; }
+#pa-calc .column-cost-info .pa-prosper-approval h5 {
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0 0 .5em 0;
+  display: inline-block; }
+#pa-calc .column-cost-info .pa-prosper-approval p {
+  clear: both;
+  margin: 0 0 1em 0; }
+#pa-calc .column-cost-info .pa-prosper-approval a.prosper-button {
+  -webkit-transition: all 50ms linear;
+          transition: all 50ms linear;
+  background: #ED8F22;
+  border: 0;
+  border-top: 2px solid #ED8F22;
+  border-bottom: 2px solid #e38212;
+  border-radius: 3px;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  font-weight: 400 !important;
+  color: #FFFFFF;
+  padding: .75em 2em;
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+  text-transform: none;
+  outline: none;
+  text-decoration: none; }
+  #pa-calc .column-cost-info .pa-prosper-approval a.prosper-button:hover, #pa-calc .column-cost-info .pa-prosper-approval a.prosper-button:active {
+    background: #ef9b3a;
+    border-top: 2px solid #ef9b3a;
+    border-bottom: 2px solid #ED8F22; }
+
+/* ==========================================================================
+   STARS
+   ========================================================================== */
+i.pa-starlg {
+  background-image: url(../img/star-sprite-large.png);
+  display: inline-block;
+  height: 22px;
+  width: 82px;
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+i.pa-starlg-0 {
+  background-position: 0 0; }
+
+i.pa-starlg-1 {
+  background-position: 0 -22px; }
+
+i.pa-starlg-2 {
+  background-position: 0 -66px; }
+
+i.pa-starlg-3 {
+  background-position: 0 -108px; }
+
+i.pa-starlg-4 {
+  background-position: 0 -152px; }
+
+i.pa-starlg-5 {
+  background-position: 0 -196px; }
+
+i.pa-starlg-05 {
+  background-position: 0 -22px; }
+
+i.pa-starlg-15 {
+  background-position: 0 -44px; }
+
+i.pa-starlg-25 {
+  background-position: 0 -88px; }
+
+i.pa-starlg-35 {
+  background-position: 0 -130px; }
+
+i.pa-starlg-45 {
+  background-position: 0 -174px; }
+
+/* ==========================================================================
+   PROGRESS MASTHEAD
+   ========================================================================== */
+#pa-calc .progress-masthead {
+  clear: all;
+  position: relative;
+  padding: 0;
+  margin: 0 0 40px 0; }
+#pa-calc .progress-bar {
+  height: 14px;
+  border-radius: 7px;
+  background: #DDD;
+  margin: 20px  0; }
+#pa-calc .progress-masthead .progress-column {
+  width: 33.333%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative; }
+#pa-calc .progress-masthead .progress-column p.step-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-weight: 600; }
+#pa-calc .progress-masthead .progress-column p.step-desc {
+  font-size: 12px;
+  line-height: 1;
+  color: #888;
+  margin: 0;
+  padding: 0;
+  white-space: pre; }
+  #pa-calc .progress-masthead .progress-column p.step-desc strong {
+    color: #ED8F22; }
+  @media (max-width: 500px) {
+    #pa-calc .progress-masthead .progress-column p.step-desc {
+      font-size: .6em; }
+      #pa-calc .progress-masthead .progress-column p.step-desc strong {
+        display: none; } }
+#pa-calc .progress-masthead .progress-one {
+  text-align: left; }
+#pa-calc .progress-masthead .progress-two {
+  text-align: center; }
+#pa-calc .progress-masthead .progress-three {
+  float: right;
+  text-align: right; }
+#pa-calc .progress-one:before, #pa-calc .progress-three:before, #pa-calc .progress-two:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  z-index: 500;
+  width: 28px;
+  height: 28px;
+  background: #ef9b3a;
+  border-radius: 50%;
+  border: 7px solid #DDD;
+  margin-bottom: -41px; }
+#pa-calc .progress-one:before {
+  left: 0; }
+#pa-calc .progress-three:before {
+  right: 0; }
+#pa-calc .progress-two:before {
+  left: 50%;
+  margin-left: -15px; }
+#pa-calc .masthead-step-two .progress-three:before {
+  background: #DDD; }
+#pa-calc .masthead-step-two:after {
+  position: absolute;
+  left: 8px;
+  right: 50.1%;
+  bottom: 4px;
+  border-bottom: 6px solid #ef9b3a;
+  border-radius: 3px;
+  content: '';
+  z-index: 501; }
+#pa-calc .masthead-step-three:after {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 4px;
+  border-bottom: 6px solid #ef9b3a;
+  border-radius: 3px;
+  content: '';
+  z-index: 501; }

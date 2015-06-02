@@ -1,0 +1,231 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pac\n"
+"POT-Creation-Date: 2013-09-21 10:55-0500\n"
+"PO-Revision-Date: 2013-09-21 10:55-0500\n"
+"Last-Translator: Andrew Norcross <andrew@andrewnorcross.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lib/pa-calc-admin.php:66
+msgid "Builder"
+msgstr ""
+
+#: lib/pa-calc-admin.php:296
+msgid "The form builder has been updated"
+msgstr ""
+
+#: lib/pa-calc-admin.php:318
+msgid "The settings have been updated"
+msgstr ""
+
+#: lib/pa-calc-admin.php:344
+msgid "Calculator"
+msgstr ""
+
+#: lib/pa-calc-admin.php:346
+msgid "Settings"
+msgstr ""
+
+#: lib/pa-calc-admin.php:348
+msgid "Logging"
+msgstr ""
+
+#: lib/pa-calc-admin.php:374 lib/pa-calc-admin.php:434
+#: lib/pa-calc-admin.php:482 lib/pa-calc-admin.php:547
+msgid "Remove"
+msgstr ""
+
+#: lib/pa-calc-admin.php:590
+msgid "Calculator Builder"
+msgstr ""
+
+#: lib/pa-calc-admin.php:593
+msgid "The available form items"
+msgstr ""
+
+#: lib/pa-calc-admin.php:594
+msgid "To display the form, use the following shortcode"
+msgstr ""
+
+#: lib/pa-calc-admin.php:615
+msgid "Freeform Fields"
+msgstr ""
+
+#: lib/pa-calc-admin.php:618
+msgid "Calculator Title"
+msgstr ""
+
+#: lib/pa-calc-admin.php:624
+msgid "Calculator Description"
+msgstr ""
+
+#: lib/pa-calc-admin.php:638
+msgid "Questions Header"
+msgstr ""
+
+#: lib/pa-calc-admin.php:644
+msgid "Submit Button text"
+msgstr ""
+
+#: lib/pa-calc-admin.php:650
+msgid "Disclaimer Text"
+msgstr ""
+
+#: lib/pa-calc-admin.php:654
+msgid "Disclaimer text to display below the submit button."
+msgstr ""
+
+#: lib/pa-calc-admin.php:661
+msgid "Calculation Fields"
+msgstr ""
+
+#: lib/pa-calc-admin.php:664
+msgid "Title"
+msgstr ""
+
+#: lib/pa-calc-admin.php:670
+msgid "Thumbnails"
+msgstr ""
+
+#: lib/pa-calc-admin.php:673
+msgid "check this box to use thumbnail images, 60px by 60px"
+msgstr ""
+
+#: lib/pa-calc-admin.php:680
+msgid "Calculation Field Options"
+msgstr ""
+
+#: lib/pa-calc-admin.php:684 lib/pa-calc-admin.php:706
+msgid "Label"
+msgstr ""
+
+#: lib/pa-calc-admin.php:685
+msgid "Cost"
+msgstr ""
+
+#: lib/pa-calc-admin.php:686
+msgid "Thumbnail"
+msgstr ""
+
+#: lib/pa-calc-admin.php:687
+msgid "Description"
+msgstr ""
+
+#: lib/pa-calc-admin.php:688
+msgid "Description URL"
+msgstr ""
+
+#: lib/pa-calc-admin.php:701
+msgid "Additional Calculation Fields"
+msgstr ""
+
+#: lib/pa-calc-admin.php:705
+msgid "Field Type"
+msgstr ""
+
+#: lib/pa-calc-admin.php:707
+msgid "Values"
+msgstr ""
+
+#: lib/pa-calc-admin.php:708
+msgid "Color"
+msgstr ""
+
+#: lib/pa-calc-admin.php:718
+msgid "For field types with multiple options, separate items with a comma."
+msgstr ""
+
+#: lib/pa-calc-admin.php:722
+msgid "Empty Doctor Return"
+msgstr ""
+
+#: lib/pa-calc-admin.php:726
+msgid "Step 2 Text"
+msgstr ""
+
+#: lib/pa-calc-admin.php:738 lib/pa-calc-admin.php:754
+msgid "Text for display when no doctors are returned in the zip code"
+msgstr ""
+
+#: lib/pa-calc-admin.php:742
+msgid "Step 3 Text"
+msgstr ""
+
+#: lib/pa-calc-admin.php:761
+msgid "Save Form"
+msgstr ""
+
+#: lib/pa-calc-admin.php:785
+msgid "PA Calculator Settings"
+msgstr ""
+
+#: lib/pa-calc-admin.php:789
+msgid "All the extra settings related to the calculator."
+msgstr ""
+
+#: lib/pa-calc-admin.php:807
+msgid "API Details"
+msgstr ""
+
+#: lib/pa-calc-admin.php:810
+msgid "Site ID"
+msgstr ""
+
+#: lib/pa-calc-admin.php:816
+msgid "Return Count"
+msgstr ""
+
+#: lib/pa-calc-admin.php:822
+msgid "Internal Email"
+msgstr ""
+
+#: lib/pa-calc-admin.php:831
+msgid "Prosper Setup"
+msgstr ""
+
+#: lib/pa-calc-admin.php:835
+msgid "Affiliate Link"
+msgstr ""
+
+#: lib/pa-calc-admin.php:841
+msgid "Anchor Text"
+msgstr ""
+
+#: lib/pa-calc-admin.php:847
+msgid "Listing Text"
+msgstr ""
+
+#: lib/pa-calc-admin.php:857
+msgid "Save Settings"
+msgstr ""
+
+#: lib/pa-calc-admin.php:880
+msgid "PA Calculator Logging"
+msgstr ""
+
+#: lib/pa-calc-logging.php:180
+msgid "Notes updated successfully"
+msgstr ""
+
+#: lib/pa-calc-logging.php:198
+msgid "No items selected"
+msgstr ""
+
+#: lib/pa-calc-logging.php:199
+msgid "no selected items"
+msgstr ""
+
+#: lib/pa-calc-logging.php:317
+msgid "Total Items Logged:"
+msgstr ""
+
+#: lib/pa-calc-logging.php:321
+msgid "Export Log File"
+msgstr ""
